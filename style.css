@@ -40,6 +40,7 @@ body {
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -48,7 +49,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -87,13 +89,11 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(50%);
-  
 }
 
-.light #switch button{
-    right: 0;
-    left: initial;
-    
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 
 #switch span {
@@ -166,4 +166,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-widht: 700px) {
+  :root {
+    --bg-url: url (./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url (./assets/bg-desktop-light.jpg);
+  }
 }
